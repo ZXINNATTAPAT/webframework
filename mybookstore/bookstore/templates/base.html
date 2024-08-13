@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Bookstore</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+<body>
+    <div class="container mt-4">
+        <header>
+            <h1>Welcome to My Bookstore</h1>
+            <p>Special Sales: Buy 2 Get 1 Free!</p>
+        </header>
+
+        <nav>
+                <a class="btn btn-primary" href="{% url 'home' %}"> Home </a>
+                <a class="btn btn-primary" href="{% url 'book_list' %}">Books</a>
+        </nav>
+
+       
+                {% block content %}
+                {% endblock %}
+    
+        <br/>
+
+        <footer>
+            <p>&copy; 2024 My Bookstore</p>
+        </footer>
+    </div>
+</body>
+</html>
